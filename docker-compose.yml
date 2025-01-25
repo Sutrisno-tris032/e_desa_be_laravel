@@ -1,0 +1,18 @@
+
+services:
+  db:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: db-edesa
+    environment:
+      - MSSQL_PID=Developer
+      - MSSQL_USER=sa
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Plampang123
+    ports:
+      - 1433:1433
+    networks:
+      - e-desa
+
+networks:
+  e-desa:
+    driver: bridge
