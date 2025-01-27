@@ -18,8 +18,12 @@ class NewsFactory extends Factory
     {
         return [
             //
-            'title' => fake()->sentence(),
-            'description' => fake()->paragraph  
+            'news_category' => '1',
+            'news_title' => fake()->sentence(),
+            'news_description' => fake()->paragraph,
+            'news_tag' => fake()->sentence(),
+            'author' => fake()->name(), 
+            'image' => fake()->imageUrl(),
         ];
     }
 }
